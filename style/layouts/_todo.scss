@@ -1,0 +1,344 @@
+.todo {
+  margin-top: 40px;
+  width: 100%;
+  @include flex_style;
+  justify-content: center;
+
+  &_title {
+    font-family: $second-family;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 38.87px;
+    color: $title_color;
+  }
+
+  &_actions {
+    @include flex_style;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+
+    &_search {
+      width: 595px;
+      height: 38px;
+      padding: 8px 16px 8px 16px;
+      border-radius: 5px;
+      border: 1px solid $bg_color;
+      outline: none;
+      font-family: $third-family;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    &_select {
+      width: 85px;
+      height: 38px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: $bg_color;
+      color: $white_color;
+      outline: none;
+    }
+
+    &_theme {
+      width: 38px;
+      height: 38px;
+      border-radius: 5px;
+      border: none;
+      background-color: $bg_color;
+      text-align: center;
+
+      &_light {
+        display: none;
+      }
+    }
+  }
+
+  &_menu {
+    width: 90%;
+    margin-top: 30px;
+
+    &_row {
+      @include flex_style;
+      gap: 10px;
+      justify-content: center;
+      width: 60%;
+      margin: 0 auto;
+
+      &_check {
+        width: 26px;
+        height: 26px;
+        gap: 0px;
+        border-radius: 2px;
+        border: 1px solid $bg_color;
+        background-color: $bg_color;
+      }
+
+      &_text {
+        width: 520px;
+        margin: 25px;
+        margin-left: 17px;
+        color: black;
+        font-family: $second-family;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+
+      }
+
+      &_actions {
+        &_btn {
+          border: none;
+          background-color: transparent;
+        }
+
+      }
+
+      &_line {
+        margin-top: 10px;
+        width: 100%;
+        border: 1px solid $bg_color;
+        opacity: 0.5px;
+      }
+    }
+  }
+}
+
+.plus {
+  background: url(../assets/plus.svg);
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-color: $main_color;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: calc(100% - 75%);
+  border: none;
+}
+
+.add {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 118px;
+  left: calc(100% - 65%);
+  width: 500px;
+  height: 289px;
+  border: 1px solid inherit;
+  border-radius: 16px;
+  background-color: $white_color;
+  padding: 18px;
+
+  &_title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &_todo {
+    padding: 8px 16px 8px 16px;
+    gap: 436px;
+    border-radius: 5px;
+    border: 1px solid $bg_color;
+    width: 100%;
+    outline: none;
+
+    font-family: $third-family;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+
+  }
+
+  &_actions {
+    margin-top: 108px;
+    @include flex_style;
+    justify-content: space-between;
+
+    &_cancel {
+      padding: 10px 22px 10px 22px;
+      border-radius: 5px;
+      border: 1px solid $bg_color;
+      background-color: transparent;
+
+      font-family: $second-family;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $bg_color;
+    }
+
+    &_applay {
+      padding: 10px 22px 10px 22px;
+      border-radius: 5px;
+      border: 1px solid $bg_color;
+      background-color: $bg_color;
+
+      font-family: $second-family;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $white_color;
+    }
+  }
+}
+
+.edit {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 118px;
+  left: calc(100% - 65%);
+  width: 500px;
+  height: 289px;
+  border: 1px solid inherit;
+  border-radius: 16px;
+  background-color: $white_color;
+  padding: 18px;
+
+  &_title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &_todo {
+    padding: 8px 16px 8px 16px;
+    gap: 436px;
+    border-radius: 5px;
+    border: 1px solid $bg_color;
+    width: 100%;
+    outline: none;
+
+    font-family: $third-family;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+
+  }
+
+  &_actions {
+    margin-top: 108px;
+    @include flex_style;
+    justify-content: space-between;
+
+    &_cancel {
+      padding: 10px 22px 10px 22px;
+      border-radius: 5px;
+      border: 1px solid $bg_color;
+      background-color: transparent;
+
+      font-family: $second-family;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $bg_color;
+    }
+
+    &_applay {
+      padding: 10px 22px 10px 22px;
+      border-radius: 5px;
+      border: 1px solid $bg_color;
+      background-color: $bg_color;
+
+      font-family: $second-family;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $white_color;
+    }
+  }
+}
+
+.bg_blur {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.236);
+  backdrop-filter: blur(10px);
+  z-index: 98;
+}
+
+
+@media screen and (max-width: 1241px) {
+
+  .todo_menu_row {
+    justify-content: space-between;
+  }
+
+  .todo_menu_row_check {
+    width: 10%;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .todo_menu_row_text {
+    width: 75%;
+    margin: 0;
+    margin-top: 20px;
+
+  }
+
+  .todo_menu_row_actions {
+    width: 10%;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+
+  .todo_actions_search {
+    width: 100%;
+  }
+
+  .todo_menu_row_text {
+    font-size: 16px;
+  }
+
+  .todo_menu_row_text {
+    width: 70%;
+    margin: 0;
+    margin-top: 20px;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo_menu_row_text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .todo_menu_row_text {
+    font-size: 10px;
+  }
+
+  
+  .todo_menu_row {
+    justify-content: space-between;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .todo_menu_row_text {
+    font-size: 10px;
+  }
+
+  
+  .todo_menu_row {
+    justify-content: space-between;
+    gap: 0;
+  }
+}

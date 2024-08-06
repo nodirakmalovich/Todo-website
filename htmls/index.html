@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>50-dars Amaliyot</title>
+</head>
+
+<body>
+
+    <div class="bg_blur"></div>
+
+    <div class="container">
+        <div class="add">
+            <h1 class="add_title">
+                NEW NOTE
+            </h1>
+            <input type="text" placeholder="Input your note" class="add_todo">
+            <div class="add_actions">
+                <button class="add_actions_cancel">CANCEL</button>
+                <button class="add_actions_applay">APPLAY</button>
+            </div>
+        </div>
+
+        <div class="edit">
+            <h1 class="edit_title">
+                EDITE NOTE
+            </h1>
+            <input type="text" placeholder="Input your note" class="edit_todo">
+            <div class="edit_actions">
+                <button class="edit_actions_cancel">CANCEL</button>
+                <button class="edit_actions_applay">APPLAY</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="todo">
+            <h1 class="todo_title">
+                TODO LIST
+            </h1>
+            <div class="todo_actions">
+                <input oninput="searchedTodo()" type="text" placeholder="Searche note..." class="todo_actions_search">
+                <select  onchange="notComplated(this)"  class="todo_actions_select">
+                    <option class="todo_actions_select_item">ALL</option>
+                    <option class="todo_actions_select_item">Not fineshed yet</option>
+                </select>
+                <button class="todo_actions_theme">
+                    <img src="../assets/dark.svg" alt="dark" class="todo_actions_theme_dark">
+                    <img src="../assets/light.svg" alt="light" class="todo_actions_theme_light">
+                </button>
+            </div>
+
+
+            <div class="todo_menu">
+
+            </div>
+        </div>
+
+    </div>
+
+    <button class="plus"></button>
+
+
+    <template id="todos">
+        <div class="todo_menu_row">
+            <input class="todo_menu_row_check" type="checkbox">
+            <h3 class="todo_menu_row_text">
+                Note#1
+            </h3>
+
+            <div class="todo_menu_row_actions">
+
+                <button class="todo_menu_row_actions_btn edit_todo_btn">
+                    <img class="todo_menu_row_actions_btn_image" src="../assets/edit.svg" alt="edit">
+                </button>
+
+                <button class="todo_menu_row_actions_btn delete_todo_btn">
+                    <img class="todo_menu_row_actions_btn_image" src="../assets/delete.svg" alt="edit">
+                </button>
+            </div>
+
+            <div class="todo_menu_row_line"></div>
+        </div>
+    </template>
+
+    <script src="../javaScript/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+username: emilys,
+password: emilyspass
+
+Этот сайт работает через поддельный API, поэтому в пользовательском интерфейсе изменений не будет.
+This website works through fake API so there will be no change in UI
